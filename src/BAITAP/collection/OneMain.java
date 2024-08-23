@@ -2,13 +2,13 @@ package BAITAP.collection;
 
 import java.util.ArrayList;
 
-public class Main {
+public class OneMain {
     // Hàm để thêm thông tin cơ bản của nhân viên vào danh sách
     public static void themNhanVien(ArrayList<Nhanvien> danhSach, String ten, int tuoi, String phongBan) {
         Nhanvien nv = new Nhanvien(ten, tuoi, phongBan);
         danhSach.add(nv);
     }
-
+//ý nghĩa hàm main: truy xuất và thực thi các phương thức. Trong 1 class chỉ có 1 hàm main duy nhất
     public static void main(String[] args) {
         // Tạo danh sách lưu thông tin các nhân viên
         ArrayList<Nhanvien> danhSachNhanVien = new ArrayList<>();
@@ -25,4 +25,5 @@ public class Main {
             System.out.println();
         }
     }
+
 }
