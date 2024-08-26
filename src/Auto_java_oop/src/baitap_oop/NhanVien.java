@@ -1,4 +1,4 @@
-package baitap_oop;
+package Auto_java_oop.src.baitap_oop;
 
 public class NhanVien {
     private String name;

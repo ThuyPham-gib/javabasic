@@ -1,4 +1,4 @@
-package java_oop.object;
+package Auto_java_oop.src.java_oop.object;
 // Class này để truy xuất thồng tin ở class SinhVien
 public class Info_SV {
     public static void main(String[] args) {
@@ -28,5 +28,10 @@ public class Info_SV {
         System.out.println(new SinhVien().getName());
 
     }
+    // Cách khởi tạo Object của class, sẽ có 3 cách
+    // C1: SinhVien sinhVien = new SinhVien();  ==> Khởi tạo đối tượng(Object) đại diện cho 1 class
+    // C2: Phải có static thì mới gọi trực tiếp 1 hàm từ 1 class sang class khác
+    // C3: new Calculation().fact(5);
+    // SinhVien sv = new SinhVien();
 }
 
