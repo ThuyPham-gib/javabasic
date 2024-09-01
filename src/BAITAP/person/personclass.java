@@ -1,5 +1,8 @@
 package BAITAP.person;
 
+import Auto_java_oop.src.java_oop.object.Company;
+import BAITAP.companypackage.classCompany;
+
 public class personclass {
     private String name;
     private int age;
@@ -34,5 +37,15 @@ public class personclass {
 
     public String getPhone() {
         return phone;
+    }
+
+    public static void main(String[] args) {
+        // tạo đối tượng person
+        personclass person = new personclass("A" ,12, "female" , "123Str", "152355");
+        // in thông tin
+        inforclass.printPersonInfo(person);
+        // tạo đối tượng company và in thông tin cơ bản
+        classCompany company = new classCompany(person);
+        company.displayinforclass();
     }
 }
