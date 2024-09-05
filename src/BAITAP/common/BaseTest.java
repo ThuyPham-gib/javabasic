@@ -1,29 +1,41 @@
 package BAITAP.common;
 
-import static BAITAP.common.constants.BROWSER;
-import static BAITAP.common.constants.REPORT;
+package common;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
-
     protected WebDriver driver;
-    // Tạo hàm create Driver
-    public void createDriver() {
-        // hiển thị thông tin cấu hình
-        System.out.println("Browser:" + BROWSER);
-        System.out.println("Report:" + REPORT);
-        System.out.println("Headless:" + constants.HEADLESS);
 
+    public void createDriver() {
+        // Hiển thị thông tin cấu hình
+        System.out.println("Browser: " + constants.BROWSER);
+        System.out.println("Report: " + constants.REPORT);
+        System.out.println("Headless: " + constants.HEADLESS);
+
+        // Tạo đối tượng WebDriver
+        if (constants.BROWSER.equalsIgnoreCase("chrome")) {
+            System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+            if (constants.HEADLESS) {
+                // Cấu hình chế độ headless
+                // ChromeOptions options = new ChromeOptions();
+                // options.addArguments("--headless");
+                // driver = new ChromeDriver(options);
+                driver = new ChromeDriver(); // Bạn có thể thêm cấu hình headless nếu cần
+            } else {
+                driver = new ChromeDriver();
+            }
+        }
+        // Thêm cấu hình cho các trình duyệt khác nếu cần
     }
 
-
-    // Tạo hàm close
     public void closeDriver() {
         if (driver != null) {
             driver.quit();
-            // hiển thị thông tin đóng trình duyệt 
-            System.out.println("Closed browser:" + BROWSER);
+            // Hiển thị thông tin đóng trình duyệt
+            System.out.println("Closed browser: " + Constants.BROWSER);
         }
-
     }
-
 }
+
