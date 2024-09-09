@@ -23,3 +23,9 @@ class MB extends Bank {
         return 9;
     }
 }
+
+/* Class con Kế thừa từ class Cha
+*   Tính chất kế thừa: chỉ gọi variable / constructor từ class cha để sử dụng
+*   Tính chất đa hình _Overriding: gọi variable / constructor từ class cha để sử dụng và chỉnh sửa Khác với class
+*/
+
