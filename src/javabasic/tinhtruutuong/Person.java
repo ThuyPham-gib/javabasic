@@ -1,5 +1,5 @@
 package javabasic.tinhtruutuong;
-
+// kế thừa từ lớp abstract
 abstract class Person
 {
     protected String ten;
