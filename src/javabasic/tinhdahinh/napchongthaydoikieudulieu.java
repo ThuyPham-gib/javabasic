@@ -8,14 +8,23 @@ class Adders {
     static double add(double a, double b) {
         return a + b;
     }
-}
 
+    static float add(float a, float b) {
+        return a + b;
+    }
+    static void add() {
+        System.out.println("Overloading");
+    }
+}
+//Overloading method
 public class napchongthaydoikieudulieu {
     public static void main(String[] args) {
 
         System.out.println("Ví dụ về nạp chồng:");
         System.out.println(Adders.add(11, 11));
         System.out.println(Adders.add(12.3, 12.6));
+        Adders.add(1,3);
+
     }
 }
 
